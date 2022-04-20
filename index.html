@@ -235,11 +235,13 @@
 			<!------------------- BIBLIOGRAPHY ----------------------->
 			<h2 id="references">References</h2>
 			<ul>
-				<li>Gálvez-López, Dorian, and Juan D. Tardos. "Bags of binary words for fast place recognition in image sequences." IEEE Transactions on Robotics 28.5 (2012): 1188-1197.</li>
-				<li>Mur-Artal, Raul, Jose Maria Martinez Montiel, and Juan D. Tardos. "ORB-SLAM: a versatile and accurate monocular SLAM system." IEEE transactions on robotics 31.5 (2015): 1147-1163.</li>
-				<li>Mur-Artal, Raul, and Juan D. Tardós. "Orb-slam2: An open-source slam system for monocular, stereo, and rgb-d cameras." IEEE Transactions on Robotics 33.5 (2017): 1255-1262.</li>
-				<li>Rublee, Ethan, et al. "ORB: An efficient alternative to SIFT or SURF." (2011): 2564-2571.</li>
-				<li>Olson, Edwin. "AprilTag: A robust and flexible visual fiducial system." 2011 IEEE International Conference on Robotics and Automation. IEEE, 2011.</li>
+				At present, limited by computing resources, only three schemes of robot exploration area have been tested at the same time. However, in our practical application scenarios, such as disaster rescue, space exploration, etc., more robots are often used for rapid map construction. Therefore, we hope that in the future, we will be able to implement collaborative SLAMs that include more robots, and even map construction based on robot swarms.
+
+Next, our current approach to merging is overlapping maps based on the estimated initial relative location while the internal pose graphs are independent between robots, which leads to uncontrollable errors at map junctions. In the future, we hope to modify the pipeline of ORB\_SLAM so that robots can identify, register, and synchronize common feature points among robots, and then use these feature points as edges to connect independent graphs between robots for loop closure detection and further online optimization.
+
+In addition, the current data set of our project comes from the simulation environment, which is different from the data in the real world. At the same time, there are currently few datasets suitable for multi-robot SLAM, so in the future, we hope to use multi-robot field collection data to build a dataset, and continue to develop our project on this dataset.
+
+Finally, we want to optimize the data storage method. At present, we also save some log information when producing maps, which makes the amount of data we store grow rapidly and makes it difficult for us to generate large-scale maps. Therefore, we want to optimize map information in the future. storage method to increase the scale of our stored data.</li>
 			</ul>
 
 		</article>
