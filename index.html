@@ -113,6 +113,7 @@
 		<section id="navbar">
 			<nav>
 				<table>
+					<tr><td><a href="#Presentation">Presentation</a></td></tr>
 					<tr><td><a href="#team">Team</a></td></tr>
 					<tr><td><a href="#orbslam">ORB-SLAM</a></td></tr>
 					<tr><td><a href="#multiagent">Multi-Agent ORB-SLAM</a></td></tr>
@@ -164,7 +165,7 @@
 				<li>Two robots exploring can cover the same space in half the time.</li>
 				<li>If the two robots can identify each other, they can use recognition of the other robot as an additional opportunity for loop closure.  We make use of Ed Olson's popular <a href="https://april.eecs.umich.edu/software/apriltag" target="_blank">April tag</a> system for robot identification.</li>
 			</ol>
-			<p>However, a multi-agent system requires a mechanism for combining map data from the ORB-SLAM implementation running on each robot.  While future implementations may utilize a client-server architecture to do this fusion, here we simply create a separate server thread with direct access to the client threads.</p>
+			<p>However, a multi-agent system requires a mechanism for combining map data from the ORB-SLAM implementation running on each robot.  While future implementations may utilize a client-server architecture to do this fusion, here we are just parallely running ORB-SLAM instances on the 2 robots.</p>
 
 			<hr />
 
